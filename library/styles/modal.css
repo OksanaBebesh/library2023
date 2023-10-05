@@ -1,0 +1,285 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(80, 80, 80, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: absolute;
+  border-radius: 10px;
+  width: 500px;
+  height: 90%;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+.modal__close-icon {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 37px;
+  right: -4px;
+  width: 115px;
+  height: 161px;
+  color: #000000;
+  font-family: "Inter";
+  font-size: 15px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-menu p:first-child {
+  font-weight: 600;
+}
+
+.sub-menu .separator {
+  height: 1px;
+  width: 40px;
+  background-color: #bb945f;
+}
+
+.sub-menu a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Inter";
+  font-size: 15px;
+}
+
+.golden-input {
+  width: 200px;
+  height: 20px;
+  border: 1px solid #bb945f;
+}
+
+.small-input {
+  width: 45px;
+}
+
+.login-form,
+.register-form {
+  width: 250px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Inter";
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+}
+
+.login-form p:first-child,
+.register-form p:first-child {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.login-form button,
+.register-form button {
+  width: 75px;
+  height: 30px;
+  padding: 7px 14px;
+  border: 1px solid #0c0c0e;
+  margin-top: 20px;
+}
+
+.hint {
+  font-size: 10px;
+}
+
+.hint a {
+  color: #000000;
+}
+
+button:hover {
+  background-color: #bb945f;
+  cursor: pointer;
+  border-radius: 8%;
+}
+
+.profile-form {
+  display: flex;
+}
+
+.profile-form .column-1 {
+  width: 170px;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  color: #bb945f;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  font-size: 20px;
+}
+
+.flName {
+  width: 120px;
+  height: 30px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Inter";
+  font-size: 20px;
+  text-align: center;
+  line-height: 27px;
+}
+
+.profile-form .column-2 {
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter";
+  font-size: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.profile-title {
+  text-transform: uppercase;
+  font-family: "Forum";
+  font-size: 40px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.profile-points-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-points-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-points-block p:last-child {
+  font-size: 10px;
+}
+
+.icon-visits,
+.icon-bonuses,
+.icon-books {
+  width: 21px;
+  height: 21px;
+}
+
+.library-card .profile-points-block p:first-child {
+  font-size: 10px;
+}
+
+.icon-visits {
+  background-image: url("../images/profile-icon/Union.svg");
+}
+
+.icon-bonuses {
+  background-image: url("../images/profile-icon/Star\ 1.svg");
+}
+
+.icon-books {
+  background-image: url("../images/profile-icon/Rectangle\ 32.svg");
+}
+
+.icon-copy {
+  background-image: url("../images/profile-icon/icon\ copy.svg");
+  width: 13px;
+  height: 13px;
+}
+
+.card-number,
+.golden-text {
+  color: #bb945f;
+}
+
+.cost {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.gray-text {
+  color: #8e8e8e;
+  font-size: 15px;
+  font-family: "Inter";
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 3px;
+}
+
+.library-card-form {
+  width: 650px;
+  height: 540px;
+}
+
+.library-card-container {
+  display: flex;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.library-card-title {
+  font-family: "Forum";
+  font-size: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  letter-spacing: 1px;
+}
+
+.library-card-container .column-1,
+.library-card-container .column-2 {
+  padding-left: 25px;
+  padding-bottom: 50px;
+}
+
+.library-card-container .column-1 button {
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 75px;
+  height: 40px;
+  font-weight: 600;
+  border: 1px solid #000000;
+  margin-right: 40px;
+}
+
+.digital-library-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.digital-library-content .column-2 button {
+  width: 75px;
+  height: 30px;
+  margin-top: 40px;
+}
