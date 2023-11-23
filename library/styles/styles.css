@@ -1,0 +1,892 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-width: 100%;
+  max-width: 1440px;
+  margin: 0;
+  padding: 0;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-self: baseline;
+  align-items: center;
+  padding: 11px 31px 11px 24px;
+  background-color: #0c0c0e;
+  min-height: 90px;
+  color: #ffffff;
+  z-index: 1;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 40px;
+  font-family: Forum;
+  color: #0c0c0e;
+}
+
+h3 {
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+}
+
+footer {
+  min-height: 250px;
+  max-height: 250px;
+  padding: 20px 20px 0;
+  color: #ffffff;
+  background-color: #0c0c0e;
+}
+
+header h3 {
+  font-weight: 100;
+  background-color: #0c0c0e;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+}
+
+nav ul > li {
+  display: inline-block;
+  align-items: baseline;
+  list-style-type: none;
+  flex-direction: row;
+  margin-right: 30px;
+  align-self: center;
+  font-size: 21px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul > li > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav ul > li > a:hover {
+  color: #c38154;
+}
+
+#burger,
+#burger-menu {
+  display: none;
+}
+
+.profile-icon {
+  width: 31px;
+  height: 31px;
+  background-image: url("../images/icon_profile.png");
+  background-repeat: no-repeat;
+}
+
+.profile-icon:hover {
+  background-image: url("../images/icon_profile_hover.png");
+  background-repeat: no-repeat;
+}
+
+.profile {
+  display: flex;
+  position: relative;
+}
+
+.hero {
+  width: 100%;
+  min-height: 600px;
+  background-image: url("../images/Welcome.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100%;
+  margin-top: -23px;
+}
+
+.hero h1 {
+  font-family: "Forum";
+  font-size: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.about .line-description h2 {
+  margin-block-start: 0.53em;
+}
+
+.line-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-description h3 {
+  margin-block-start: 2.5em;
+  font-size: 19px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.pagination span:nth-last-child(-n + 2) {
+  display: none;
+}
+
+section {
+  margin: 0;
+}
+
+.gallery-about {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-about img {
+  padding: 11px;
+}
+
+/* .gallery-about.slide-3,
+.gallery-about.slide-2 {
+  opacity: 0;
+  display: none;
+} */
+
+.line-description .separator {
+  width: 50px;
+  height: 1px;
+  background: #0c0c0e;
+  margin-top: -16px;
+}
+
+.item {
+  width: 27px;
+  height: 27px;
+  color: #0c0c0e;
+  font-size: 48px;
+  cursor: pointer;
+}
+
+.favorites .line-description h2 {
+  margin-block-start: 1.83em;
+}
+
+.favorites .seasons-header {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-block-start: 2em;
+}
+
+.favorites {
+  width: 96%;
+  /* margin: 0 auto; */
+}
+
+.active {
+  color: #bb945f;
+}
+
+.seasons {
+  display: inline-flex;
+  list-style-type: none;
+  justify-content: flex-start;
+  margin-block-start: 1em;
+  padding-inline-start: 18px;
+  padding: 10px;
+}
+
+.seasons input[type="radio"] + label:hover {
+  cursor: pointer;
+}
+
+.seasons li {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.seasons li:not(:nth-last-of-type(1)) {
+  margin-right: 90px;
+}
+
+.seasons input[type="radio" i] {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.seasons input[type="radio"] {
+  border: 1px solid #0000;
+  width: 17px;
+  height: 17px;
+  margin: 8px 6px -9px 3px;
+}
+
+.seasons input[type="radio"]:checked + label {
+  font-weight: bold;
+}
+
+.favorites-books-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.book-block {
+  min-width: 550px;
+  min-height: 550px;
+  max-width: 550px;
+  max-height: 550px;
+  position: relative;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.book-block button {
+  padding: 7px 25px;
+  position: absolute;
+  bottom: 7px;
+  left: 38px;
+}
+
+.book-block button:hover {
+  background-color: #bb945f;
+  cursor: pointer;
+  border-radius: 8%;
+}
+
+.book-description {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  max-width: 355px;
+  min-width: 355px;
+}
+
+.book-photo {
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  right: -39px;
+}
+
+.menu-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.desserts-block h2,
+.drinks-block h2 {
+  color: #bb945f;
+  font-family: "Forum";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  /* margin-block-start: 1em;
+  margin-block-end: 1.1em; */
+}
+
+.desserts-block {
+  text-align: right;
+}
+
+.menu-item > .separator {
+  width: 100px;
+  height: 1px;
+  background: #bb945f;
+}
+
+div.menu-item {
+  width: 250px;
+}
+
+.desserts-block > div.menu-item {
+  text-align: right;
+}
+
+.coffe-shop p {
+  color: #000;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.coffee-description {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-block-start: 2em;
+}
+
+.coffee-shop {
+  width: 97%;
+  margin: 10px auto;
+}
+
+.menu {
+  list-style-type: none;
+  padding-inline-start: 0;
+  width: 438px;
+}
+
+.menu-item {
+  color: #000;
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: baseline;
+}
+
+#map {
+  height: 400px; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-items h6 {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-block-start: 0.33em;
+}
+
+.our-contacts {
+  /* width: 80%; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.our-contacts .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.our-contacts .line-description {
+  margin-bottom: 40px;
+}
+
+.our-contacts .line-description h2 {
+  margin-block-start: 0em;
+}
+
+.card-find-form {
+  padding: 21px;
+}
+
+.card-find-form h3,
+.digital-library-content .column-1 h3 {
+  letter-spacing: 2.3px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.find-form button:hover {
+  cursor: pointer;
+  background-color: #bb945f;
+  border-radius: 8px;
+}
+
+.form-container p {
+  color: #000;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+}
+
+.digital-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* width: 80%; */
+  margin: 0 auto;
+  margin-bottom: 6px;
+}
+
+.digital-cards .line-description {
+  display: flex;
+  justify-content: center;
+}
+
+.digital-cards .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.find-form {
+  border: 3px solid #bb945f;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  width: 560px;
+  height: 272px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #bb945f;
+  margin-bottom: 20px;
+}
+
+.form-container p {
+  margin-block-end: 0em;
+  margin-block-start: 0.5em;
+}
+
+.form-container input[type="text"] {
+  width: 520px;
+  padding: 8px 8px 8px 20px;
+  border-radius: 10px;
+  background: #fff;
+  color: #8e8e8e;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+  margin-bottom: 25px;
+  border: 1px solid #bb945f;
+}
+
+.find-form button {
+  border-radius: 2px;
+  border: 1px solid #0c0c0e;
+  padding: 10px 40px;
+  width: 242px;
+  height: 44px;
+  font-family: Inter;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.register-card-block p {
+  width: 456px;
+  height: 120px;
+  color: #000;
+  text-align: right;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+}
+
+.register-card-block {
+  text-align: right;
+}
+
+.register-card-block h5 {
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin-block-end: 28px;
+}
+
+.btn-lines button {
+  padding: 5px 10px;
+  letter-spacing: 1px;
+}
+
+.btn-lines button:hover {
+  cursor: pointer;
+  background-color: #bb945f;
+  border-radius: 8px;
+}
+
+.btn-lines button:last-child {
+  margin-left: 20px;
+}
+
+.btn-lines {
+  padding: 20px 20px;
+}
+
+footer .separator {
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  margin: 14px 0 46px;
+}
+
+.footer-social-nav li {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.social-block {
+  line-height: 10px;
+}
+
+.work-time {
+  line-height: 0px;
+}
+
+.footer-social-nav {
+  margin-right: 15px;
+  padding-inline-start: 0;
+}
+
+.social-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.facebook {
+  background-image: url("../images/u_facebook-f.png");
+  color: red;
+}
+
+.instagram {
+  background-image: url("../images/u_instagram.png");
+}
+
+.twitter {
+  background-image: url("../images/u_twitter-alt.png");
+}
+
+.facebook:hover {
+  background-image: url("../images/u_facebook-f_hover.png");
+}
+
+.instagram:hover {
+  background-image: url("../images/u_instagram_hover.png");
+}
+
+.twitter:hover {
+  background-image: url("../images/u_twitter-alt_hover.png");
+}
+
+.adress {
+  display: flex;
+  justify-content: space-between;
+}
+
+.href-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.href-line a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.href-line a:hover {
+  color: #bb945f;
+}
+
+.footer-social-nav {
+  display: flex;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    max-width: 1000px;
+  }
+
+  .wrapper {
+    max-width: 100%;
+  }
+
+  .gallery-about {
+    overflow: hidden;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* body {
+    max-width: 1000px;
+    min-width: 768px;
+  } */
+
+  .profile-icon {
+    z-index: 100;
+    margin-right: 40px;
+  }
+
+  .profile {
+    display: flex;
+  }
+
+  #main-menu {
+    display: none;
+  }
+
+  #burger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 45px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  #burger input {
+    display: block;
+    width: 45px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  #burger > span {
+    width: 45px;
+    height: 2px;
+    margin-bottom: 7px;
+    background: #fff;
+    border-radius: 3px;
+
+    z-index: 1;
+  }
+  #burger input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(12px, 12px);
+    background: #fff;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #burger input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #burger input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  .profile a {
+    z-index: 3;
+  }
+
+  #burger-menu {
+    position: absolute;
+    right: -18px;
+    top: -55px;
+  }
+
+  #burger input:checked ~ #burger-menu {
+    display: flex;
+    flex-direction: column;
+    width: 116px;
+    height: 368px;
+    background: #000;
+    padding: 100px 107px 100px 107px;
+  }
+
+  #burger-menu > li > a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: center;
+    min-width: 118px;
+    display: block;
+  }
+
+  #burger-menu > li {
+    list-style: none;
+    margin-bottom: 30px;
+    align-items: center;
+    align-self: center;
+  }
+
+  #burger-menu ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 600px;
+    max-height: 600px;
+  }
+
+  .about .gallery-about img:nth-last-child(-n + 2) {
+    display: none;
+  }
+
+  .pagination span:nth-last-child(-n + 2) {
+    display: flex;
+  }
+
+  .menu-block {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+  }
+
+  .desserts-block {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .our-contacts .container,
+  .favorites-books-block,
+  .digital-cards {
+    justify-content: center;
+  }
+
+  .digital-cards .container {
+    justify-content: center;
+  }
+
+  .register-card-block p {
+    text-align: center;
+  }
+
+  .register-card-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .drinks-block {
+    margin-bottom: 38px;
+  }
+
+  .desserts-block h2,
+  .drinks-block h2,
+  .register-card-block h5 {
+    margin-block-start: 0em;
+  }
+
+  .register-card-block p {
+    width: 600px;
+    margin-block-end: 0;
+  }
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 2s;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
+}
